@@ -1,0 +1,72 @@
+@media (min-width: 768px) {
+	.header {
+		&__content {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			&__btn {
+				display: none;
+			}
+		}
+		&__navDesktop {
+			display: block;
+			margin-right: 10rem;
+			text-transform: capitalize;
+			font-size: 1rem;
+			&__item {
+				padding: 1.7rem;
+				color: colors.$blackMain;
+				text-decoration: none;
+				font-family: 'Roboto', sans-serif;
+				transition: background 0.3s, color 0.3s;
+				&:hover {
+					background: colors.$blackMain;
+					color: colors.$whiteMain;
+				}
+			}
+		}
+		&__img {
+			&__shadow {
+				&__text {
+					&__title {
+						font-size: 1.7rem;
+						font-weight: lighter;
+						color: colors.$whiteMain;
+						z-index: 100;
+					}
+					&__subtitle {
+						font-size: 2.2rem;
+						font-weight: bold;
+						color: colors.$whiteMain;
+					}
+				}
+			}
+		}
+	}
+	.aboutUs {
+		&__body {
+			flex-direction: row-reverse;
+			align-items: flex-start;
+			justify-content: space-between;
+			padding: 1rem;
+	
+			&__content {
+				width: 50%;
+				margin-left: 5rem;
+				&__title {
+					margin-bottom: 1rem;
+					font-size: 1.3rem;
+					text-align: left;
+				}
+				&__text {
+					margin-bottom: 0;
+					font-size: 1rem;
+				}
+			}
+			&__photo {
+				width: 50%;
+			}
+		}
+	}
+}

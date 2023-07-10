@@ -1,0 +1,30 @@
+//Wrapper
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+//Brak scrollu dla nawigacji moblinej
+.sticky-body {
+	overflow: hidden;
+}
+
+.active{
+    transform: translateX(0);
+}
+
+.sectionTitle {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+	padding: .5rem;
+	
+	h2{
+		font-weight: lighter;
+		font-size: 2.5rem;
+		text-transform: uppercase;
+	}
+}
