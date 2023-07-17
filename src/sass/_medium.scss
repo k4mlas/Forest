@@ -50,7 +50,7 @@
 			align-items: flex-start;
 			justify-content: space-between;
 			padding: 1rem;
-	
+
 			&__content {
 				width: 50%;
 				margin-left: 5rem;
@@ -66,6 +66,17 @@
 			}
 			&__photo {
 				width: 50%;
+			}
+		}
+	}
+	.banner {
+		&__img {
+			&__shadow {
+				&__text {
+					p {
+						font-size: 2.5rem;
+					}
+				}
 			}
 		}
 	}

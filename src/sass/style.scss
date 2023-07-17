@@ -190,11 +190,11 @@ body {
 			height: 100%;
 			background: rgba(0, 0, 0, 0.4);
 			&__text {
-				width: 50%;
+				width: 70vw;
 				border: 2px solid colors.$whiteMain;
 				p {
 					padding: 2rem;
-					font-size: 2.5rem;
+					font-size: 1.5rem;
 					text-align: center;
 					text-transform: uppercase;
 					color: colors.$whiteMain;
