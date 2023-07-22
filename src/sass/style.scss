@@ -203,6 +203,55 @@ body {
 		}
 	}
 }
+.offer{
+	&__text{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 1rem;
+
+	}
+	&__body{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 1rem;
+		padding: 1rem;
+		&__content{
+			background-color: colors.$whiteMain;
+			padding: 2.5rem;
+			border-radius: .4rem;
+			box-shadow: 1px 2px 10px colors.$blackMain;
+			&__name{
+				font-size: 2rem;
+				text-align: center;
+				
+			}
+			&__price{
+				font-size: 1.7rem;
+				text-align: center;
+				margin-bottom: 1rem;
+				font-weight: bold;
+				span {
+					font-size: 2.1rem;
+				}
+			}
+			&__opctions{
+				list-style: none;
+				font-size: 1rem;font-weight: lighter;
+				margin-bottom: 1rem;
+			}
+			&__btn{
+				width: 100%;
+				font-size: 1.5rem;
+				text-align: center;
+				padding: .2rem;
+				cursor: pointer;
+			}
+		}
+	}
+
+}
 @import './components';
 @import './medium';
 @import './large';
