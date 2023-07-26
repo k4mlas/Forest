@@ -203,34 +203,32 @@ body {
 		}
 	}
 }
-.offer{
-	&__text{
+.offer {
+	&__text {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		margin-bottom: 1rem;
-
 	}
-	&__body{
+	&__body {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		flex-wrap: wrap;
 		margin: 1rem;
 		padding: 1rem;
-		&__content{
+		&__content {
 			min-width: 250px;
 			background-color: colors.$whiteMain;
 			padding: 2.5rem;
 			margin: 2rem;
-			border-radius: .4rem;
+			border-radius: 0.4rem;
 			box-shadow: 0 0 10px colors.$blackMain;
-			&__name{
+			&__name {
 				font-size: 2rem;
 				text-align: center;
-				
 			}
-			&__price{
+			&__price {
 				font-size: 1.7rem;
 				text-align: center;
 				margin-bottom: 1rem;
@@ -239,32 +237,45 @@ body {
 					font-size: 2.1rem;
 				}
 			}
-			&__opctions{
+			&__opctions {
 				list-style: none;
-				font-size: 1rem;font-weight: lighter;
+				font-size: 1rem;
+				font-weight: lighter;
 				margin-bottom: 1rem;
-				i{
-					margin-right: .5rem;
+				&__list {
+					color: colors.$blackMain;
+					&--non {
+						color: colors.$greykMain;
+					}
+					i {
+						margin-right: 0.5rem;
+					}
+					.fa-check {
+						color: colors.$greenMain;
+					}
 				}
 			}
-			&__btn{
+			&__btn {
 				width: 100%;
 				font-size: 1.2rem;
-				font-weight:lighter;
+				font-weight: lighter;
 				text-align: center;
-				padding: .4rem;
+				padding: 0.4rem;
 				border: none;
 				background: none;
 				box-shadow: 0 2px 3px colors.$blackMain;
 				border-radius: 5px;
 				cursor: pointer;
-				&--active{
+				transition: background-color 0.3s;
+				&--active {
 					background-color: colors.$activeBtn;
+				}
+				&:hover {
+					background-color: colors.$greenMain;
 				}
 			}
 		}
 	}
-
 }
 @import './components';
 @import './medium';
