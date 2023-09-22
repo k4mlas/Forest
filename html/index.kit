@@ -10,16 +10,16 @@
     <meta name="description" content="FOREST - najpiękniejszy park w Twojej okolicy">
     <title>Forest | Strona Główna</title>
     <link rel="stylesheet" href="./dist/css/style.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <!-- @include 'fonts' -->
     <script src="https://kit.fontawesome.com/a29ce9ae35.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header class="header">
         <div class="header__content">
-            <p class="header__content__title"><i class="fa-solid fa-tree"></i>Forest</p>
+            <a class="header__content__link" href="#">
+                <p class="header__content__link__title"><i class="fa-solid fa-tree"></i>Forest</p>
+            </a>
             <button class="header__content__btn">
                 <div class="header__content__btn__box">
                     <div class="header__content__btn__box__line"></div>
@@ -27,26 +27,26 @@
             </button>
             <nav class="header__navDesktop">
                 <a href="#" class="header__navDesktop__item">Home</a>
-                <a href="#" class="header__navDesktop__item">o nas</a>
-                <a href="#" class="header__navDesktop__item">oferta</a>
-                <a href="#" class="header__navDesktop__item">kontakt</a>
+                <a href="#" class="header__navDesktop__item">O nas</a>
+                <a href="#" class="header__navDesktop__item">Oferta</a>
+                <a href="#" class="header__navDesktop__item">Kontakt</a>
             </nav>
         </div>
         <nav class="header__nav">
             <div class="header__nav__items">
                 <a href="#" class="header__nav__items__item">Home</a>
-                <a href="#" class="header__nav__items__item">o nas</a>
-                <a href="#" class="header__nav__items__item">oferta</a>
+                <a href="#" class="header__nav__items__item">O nas</a>
+                <a href="#" class="header__nav__items__item">Oferta</a>
                 <a href="#" class="header__nav__items__item">kontakt</a>
             </div>
         </nav>
         <div class="header__img">
-            <div class="header__img__shadow">
-                <div class="header__img__shadow__text">
-                    <h1 class="header__img__shadow__text__title">Forest group</h1>
-                    <p class="header__img__shadow__text__subtitle">Najpiękniejszy park w Twojej okolicy!</p>
-                </div>
+            <div class="header__img__shadow"></div>
+            <div class="header__img__shadow__text">
+                <h1 class="header__img__shadow__text__title">Forest group</h1>
+                <p class="header__img__shadow__text__subtitle">Najpiękniejszy park w Twojej okolicy!</p>
             </div>
+
         </div>
 
     </header>
@@ -79,7 +79,7 @@
 
         </div>
     </section>
-    <section class="offer">
+    <!-- <section class="offer">
         <div class="sectionTitle">
             <h2>Oferta</h2>
         </div>
@@ -175,7 +175,7 @@
         </div>
 
 
-    </footer>
+    </footer> -->
 
 
 

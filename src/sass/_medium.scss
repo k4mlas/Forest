@@ -2,20 +2,21 @@
 	.header {
 		&__content {
 			display: flex;
-			justify-content: space-between;
+			justify-content: space-evenly;
 			align-items: center;
-
 			&__btn {
 				display: none;
 			}
 		}
 		&__navDesktop {
-			display: block;
-			margin-right: 10rem;
-			text-transform: capitalize;
-			font-size: 1rem;
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+			font-size: .9rem;
+			height: 100%;
+			overflow: hidden;
 			&__item {
-				padding: 1.7rem;
+				padding: 1.5rem;
 				color: colors.$blackMain;
 				text-decoration: none;
 				font-family: 'Roboto', sans-serif;
@@ -48,14 +49,16 @@
 		&__body {
 			flex-direction: row-reverse;
 			align-items: flex-start;
-			justify-content: space-between;
-			padding: 1rem;
-
+			justify-content: center;
 			&__content {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
 				width: 50%;
 				margin-left: 5rem;
 				&__title {
-					margin-bottom: 1rem;
+					width: 100%;
 					font-size: 1.3rem;
 					text-align: left;
 				}

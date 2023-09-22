@@ -1,1 +1,11 @@
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+	.aboutUs {
+		&__body {
+			&__content {
+				&__text {
+					font-size: 1.2rem;
+				}
+			}
+		}
+	}
+}
