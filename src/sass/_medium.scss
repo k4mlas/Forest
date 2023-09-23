@@ -12,7 +12,7 @@
 			display: flex;
 			justify-content: space-evenly;
 			align-items: center;
-			font-size: .9rem;
+			font-size: 0.9rem;
 			height: 100%;
 			overflow: hidden;
 			&__item {
@@ -88,6 +88,23 @@
 			margin: 2rem;
 			font-size: 1.3rem;
 			text-align: center;
+		}
+	}
+
+	.footer {
+		&__content {
+			flex-direction: row;
+			justify-content: space-evenly;
+			&__title {
+				margin-left: 1rem;
+			}
+			&__body {
+				flex-direction: row;
+				align-items: flex-start;
+				&__list {
+					text-align: left;
+				}
+			}
 		}
 	}
 }
