@@ -12,7 +12,7 @@
 
 html {
 	scroll-behavior: smooth;
-	scroll-padding-top: 160px;
+	scroll-padding-top: 3.75rem;
 }
 
 body {
@@ -159,162 +159,161 @@ body {
 	}
 }
 
-	.aboutUs {
-		&__body {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			padding: 1rem;
-			&__content {
-				&__title {
-					margin-bottom: 1rem;
-					font-size: 1.5rem;
-					font-weight: bold;
-					text-align: center;
-				}
-				&__text {
-					margin-bottom: 1rem;
-					font-size: 1rem;
-					font-weight: lighter;
-				}
+.aboutUs {
+	&__body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 1rem;
+		&__content {
+			&__title {
+				margin-bottom: 1rem;
+				font-size: 1.5rem;
+				font-weight: bold;
+				text-align: center;
 			}
-			&__photo {
-				img {
-					width: 100%;
-				}
+			&__text {
+				margin-bottom: 1rem;
+				font-size: 1rem;
+				font-weight: lighter;
 			}
 		}
-	}
-	.banner {
-		margin-top: 3rem;
-		&__img {
-			width: 100%;
-			height: 20rem;
-			background-image: url(../img/girl-g5de2c9073_1920.jpg);
-			background-position: center;
-			background-size: cover;
-			background-attachment: fixed;
-			&__shadow {
-				display: flex;
-				justify-content: center;
-				align-items: center;
+		&__photo {
+			img {
 				width: 100%;
-				height: 100%;
-				background: rgba(0, 0, 0, 0.4);
-				&__text {
-					width: 70vw;
-					border: 1px solid colors.$whiteMain;
-					p {
-						padding: 2rem;
-						font-size: 1.5rem;
-						text-align: center;
-						text-transform: uppercase;
-						color: colors.$whiteMain;
-					}
+			}
+		}
+	}
+}
+.banner {
+	margin-top: 3rem;
+	&__img {
+		width: 100%;
+		height: 20rem;
+		background-image: url(../img/girl-g5de2c9073_1920.jpg);
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+		&__shadow {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.4);
+			&__text {
+				width: 70vw;
+				border: 1px solid colors.$whiteMain;
+				p {
+					padding: 2rem;
+					font-size: 1.5rem;
+					text-align: center;
+					text-transform: uppercase;
+					color: colors.$whiteMain;
 				}
 			}
 		}
 	}
-	.offer {
-		&__text {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			margin-bottom: 1rem;
-		}
-		&__body {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			flex-wrap: wrap;
-			margin: 1rem;
-			padding: 1rem;
-			&__content {
-				min-width: 250px;
-				background-color: colors.$whiteMain;
-				padding: 2.5rem;
-				margin: 2rem;
-				border-radius: 0.4rem;
-				box-shadow: 0 0 10px colors.$blackMain;
-				&__name {
-					font-size: 2rem;
-					text-align: center;
+}
+.offer {
+	&__text {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 1rem;
+	}
+	&__body {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin: 1rem;
+		padding: 1rem;
+		&__content {
+			min-width: 250px;
+			background-color: colors.$whiteMain;
+			padding: 2.5rem;
+			margin: 2rem;
+			border-radius: 0.4rem;
+			box-shadow: 0 0 10px colors.$blackMain;
+			&__name {
+				font-size: 2rem;
+				text-align: center;
+			}
+			&__price {
+				font-size: 1.7rem;
+				text-align: center;
+				margin-bottom: 1rem;
+				font-weight: bold;
+				span {
+					font-size: 2.1rem;
 				}
-				&__price {
-					font-size: 1.7rem;
-					text-align: center;
-					margin-bottom: 1rem;
-					font-weight: bold;
-					span {
-						font-size: 2.1rem;
+			}
+			&__opctions {
+				list-style: none;
+				font-size: 1rem;
+				font-weight: lighter;
+				margin-bottom: 1rem;
+				&__list {
+					color: colors.$blackMain;
+					&--non {
+						color: colors.$greykMain;
 					}
-				}
-				&__opctions {
-					list-style: none;
-					font-size: 1rem;
-					font-weight: lighter;
-					margin-bottom: 1rem;
-					&__list {
-						color: colors.$blackMain;
-						&--non {
-							color: colors.$greykMain;
-						}
-						i {
-							margin-right: 0.5rem;
-						}
-						.fa-check {
-							color: colors.$greenMain;
-						}
+					i {
+						margin-right: 0.5rem;
 					}
-				}
-				&__btn {
-					width: 100%;
-					font-size: 1.2rem;
-					font-weight: lighter;
-					text-align: center;
-					padding: 0.4rem;
-					border: none;
-					background: none;
-					box-shadow: 0 2px 3px colors.$blackMain;
-					border-radius: 5px;
-					cursor: pointer;
-					transition: background-color 0.3s;
-					&--active {
-						background-color: colors.$activeBtn;
-					}
-					&:hover {
-						background-color: colors.$greenMain;
+					.fa-check {
+						color: colors.$greenMain;
 					}
 				}
 			}
-		}
-		&__link {
-			margin: 2rem;
-			font-size: 0.9rem;
-			text-align: center;
-			&__hiper {
-				position: relative;
+			&__btn {
+				width: 100%;
+				font-size: 1.2rem;
+				font-weight: lighter;
+				text-align: center;
+				padding: 0.4rem;
+				border: none;
+				background: none;
+				box-shadow: 0 2px 3px colors.$blackMain;
+				border-radius: 5px;
 				cursor: pointer;
-				&::before {
-					content: '';
-					position: absolute;
-					bottom: 0;
-					width: 100%;
-					height: 10%;
-					background-color: colors.$greenMain;
-					z-index: -1;
-					transition: height 0.3s;
+				transition: background-color 0.3s;
+				&--active {
+					background-color: colors.$activeBtn;
 				}
 				&:hover {
-					&::before {
-						height: 100%;
-					}
+					background-color: colors.$greenMain;
 				}
 			}
 		}
 	}
-
+	&__link {
+		margin: 2rem;
+		font-size: 0.9rem;
+		text-align: center;
+		&__hiper {
+			position: relative;
+			cursor: pointer;
+			&::before {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				height: 10%;
+				background-color: colors.$greenMain;
+				z-index: -1;
+				transition: height 0.3s;
+			}
+			&:hover {
+				&::before {
+					height: 100%;
+				}
+			}
+		}
+	}
+}
 
 .footer {
 	width: 100%;
@@ -339,7 +338,7 @@ body {
 			align-items: center;
 			justify-content: center;
 			&__list {
-				padding: 2rem;
+				padding: 1rem;
 				list-style: none;
 				text-align: center;
 				li:first-child {
@@ -347,11 +346,17 @@ body {
 					font-size: 1rem;
 					font-weight: bold;
 					cursor: auto;
+					&:hover {
+						color: colors.$blackMain;
+					}
 				}
 				li {
 					margin-bottom: 0.3rem;
 					font-weight: lighter;
 					cursor: pointer;
+					&:hover {
+						color: colors.$greenMain;
+					}
 				}
 			}
 		}
