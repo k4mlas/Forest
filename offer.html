@@ -18,33 +18,38 @@
 <body>
     <header class="header">
         <div class="header__content">
-    <a class="header__content__link" href="#">
-        <p class="header__content__link__title"><i class="fa-solid fa-tree"></i>Forest</p>
-    </a>
-    <button class="header__content__btn">
-        <div class="header__content__btn__box">
-            <div class="header__content__btn__box__line"></div>
+            <a class="header__content__link" href="#">
+                <p class="header__content__link__title"><i class="fa-solid fa-tree"></i>Forest</p>
+            </a>
+            <button class="header__content__btn">
+                <div class="header__content__btn__box">
+                    <div class="header__content__btn__box__line"></div>
+                </div>
+            </button>
+            <nav class="header__navDesktop">
+                <a href="../index.html#home" class="header__navDesktop__item activeNav">Home</a>
+                <a href="../index.html#aboutUs" class="header__navDesktop__item">O nas</a>
+                <a href="../index.html#offer" class="header__navDesktop__item">Oferta</a>
+                <a href="../contact.html" class="header__navDesktop__item">Kontakt</a>
+            </nav>
         </div>
-    </button>
-    <nav class="header__navDesktop">
-        <a href="#" class="header__navDesktop__item">Home</a>
-        <a href="#aboutUs" class="header__navDesktop__item">O nas</a>
-        <a href="#offer" class="header__navDesktop__item">Oferta</a>
-        <a href="#" class="header__navDesktop__item">Kontakt</a>
-    </nav>
-</div>
-<nav class="header__nav">
-    <div class="header__nav__items">
-        <a href="#" class="header__nav__items__item">Home</a>
-        <a href="#aboutUs" class="header__nav__items__item">O nas</a>
-        <a href="#offer" class="header__nav__items__item">Oferta</a>
-        <a href="#" class="header__nav__items__item">kontakt</a>
-    </div>
-</nav>    </header>
+        <nav class="header__nav">
+            <div class="header__nav__items">
+                <a href="../index.html#home" class="header__nav__items__item">Home</a>
+                <a href="../index.html#aboutUs" class="header__nav__items__item">O nas</a>
+                <a href="../index.html#offer" class="header__nav__items__item">Oferta</a>
+                <a href="../contact.html" class="header__nav__items__item">kontakt</a>
+            </div>
+        </nav>
+    </header>
     <main>
-        <section class="offerWall">
+        <section class="offer sectionScroll" id="offer">
 
-
+            <style>
+                .offer {
+                    height: 100vh;
+                }
+            </style>
         </section>
     </main>
     <footer class="footer">
@@ -77,6 +82,7 @@
     <div class="footer__date wrapper">
         <p class="footer__date__text">&copy<span class="footer__date__year"></span>Forest Group Company Ltd.</p>
     </div>
-</footer></body>
+</footer>    <script src="./dist/js/main.min.js"></script>
+</body>
 
 </html>

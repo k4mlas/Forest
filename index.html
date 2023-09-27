@@ -17,7 +17,7 @@
 
 <body>
 
-    <header class="header">
+    <header class="header sectionScroll" id="home">
         <div class="header__content">
     <a class="header__content__link" href="#">
         <p class="header__content__link__title"><i class="fa-solid fa-tree"></i>Forest</p>
@@ -28,10 +28,10 @@
         </div>
     </button>
     <nav class="header__navDesktop">
-        <a href="#" class="header__navDesktop__item">Home</a>
+        <a href="#home" class="header__navDesktop__item activeNav">Home</a>
         <a href="#aboutUs" class="header__navDesktop__item">O nas</a>
         <a href="#offer" class="header__navDesktop__item">Oferta</a>
-        <a href="#" class="header__navDesktop__item">Kontakt</a>
+        <a href="../contact.html" class="header__navDesktop__item">Kontakt</a>
     </nav>
 </div>
 <nav class="header__nav">
@@ -39,7 +39,7 @@
         <a href="#" class="header__nav__items__item">Home</a>
         <a href="#aboutUs" class="header__nav__items__item">O nas</a>
         <a href="#offer" class="header__nav__items__item">Oferta</a>
-        <a href="#" class="header__nav__items__item">kontakt</a>
+        <a href="../contact.html" class="header__nav__items__item">kontakt</a>
     </div>
 </nav>        <div class="header__img">
             <div class="header__img__shadow"></div>
@@ -51,7 +51,7 @@
 
     </header>
     <main>
-        <section class="aboutUs" id="aboutUs">
+        <section class="aboutUs sectionScroll" id="aboutUs">
             <div class="sectionTitle">
                 <h2>O nas</h2>
             </div>
@@ -82,7 +82,7 @@
 
             </div>
         </section>
-        <section class="offer" id="offer">
+        <section class="offer sectionScroll" id="offer">
             <div class="sectionTitle">
                 <h2>Oferta</h2>
             </div>
@@ -152,9 +152,9 @@
                     <button class="offer__body__content__btn">Wybierz</button>
                 </div>
             </div>
-            <p class="offer__link"><span class="offer__link__hiper">Sprawdź
+            <p class="offer__link"><a href="../offer.html" class="offer__link__hiper">Sprawdź
                     resztę
-                    naszych ofert !</span></p>
+                    naszych ofert !</a></p>
         </section>
     </main>
     <footer class="footer">

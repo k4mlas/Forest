@@ -6,6 +6,9 @@ let $btnNavMobile;
 let $navMobile;
 let $navLinksMobile;
 
+let $navLinksDesktop;
+let $sections;
+
 ///////////////////////////////////////Funkcja main
 
 const main = () => {
@@ -19,17 +22,23 @@ const prepareDOMElements = () => {
 	$btnNavMobile = document.querySelector('.header__content__btn');
 	$navMobile = document.querySelector('.header__nav');
 	$navLinksMobile = document.querySelectorAll('.header__nav__items__item');
+	$navLinksDesktop = document.querySelectorAll('.header__navDesktop__item');
+	$sections = document.querySelectorAll('.sectionScroll');
 };
 
 const prepareDOMEvens = () => {
 	$btnNavMobile.addEventListener('click', showNav);
 };
-///////////////////////////////////////////////////////Funkcje
+////////////////////////////////////////////////////////////////////////Funkcje
+
+//DATA
 
 const handleCurrentYear = () => {
 	const year = new Date().getFullYear();
 	$footerYear.innerText = year;
 };
+
+//Nawigacja mobilna
 
 const showNav = () => {
 	$navMobile.classList.toggle('active');
@@ -42,6 +51,25 @@ const showNav = () => {
 	});
 };
 
-////////////////////////////////////////////////////////Funkcja Main wyłowanie
+//scrollspy
+
+window.onscroll = () => {
+	$sections.forEach((sec) => {
+		let top = window.scrollY;
+		let offset = sec.offsetTop - 150;
+		let height = sec.offsetHeight;
+		let id = sec.getAttribute('id');
+
+
+		if (top >= offset && top < offset + height) {
+			$navLinksDesktop.forEach((links) => {
+				links.classList.remove('activeNav');
+				document.querySelector('.header__navDesktop__item[href*=' + id + ']').classList.add("activeNav")
+			});
+		}
+	});
+};
+
+////////////////////////////////////////////////////////Funkcja Main 
 
 document.addEventListener('DOMContentLoaded', main);
