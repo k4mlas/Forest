@@ -296,7 +296,9 @@ body {
 		text-align: center;
 		&__hiper {
 			position: relative;
+			color: colors.$blackMain;
 			cursor: pointer;
+			text-decoration: none;
 			&::before {
 				content: '';
 				position: absolute;
