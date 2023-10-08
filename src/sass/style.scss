@@ -110,7 +110,7 @@ body {
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
-			
+
 			&__item {
 				padding: 0.5rem;
 				margin-bottom: 1rem;
@@ -312,6 +312,91 @@ body {
 			&:hover {
 				&::before {
 					height: 100%;
+				}
+			}
+		}
+	}
+	&__nextOffer {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		&__one {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 500px;
+			margin-top: 3.75rem;
+			background-image: url(../img/offerOneSmall.jpg);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			&--two {
+				background-image: url(../img/offerTwoSmall.jpg);
+			}
+			&--three {
+				background-image: url(../img/offerThreeSmall.jpg);
+			}
+			&__content {
+				display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+				&__box {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					&__text {
+						padding: 1.2rem;
+						text-align: center;
+						&__title {
+							text-transform: uppercase;
+							font-size: 4rem;
+							font-weight: lighter;
+							color: colors.$offerColor;
+						}
+						&__subtitle {
+							padding: 0.5rem;
+							font-size: 3rem;
+							font-weight: bold;
+							color: colors.$whiteMain;
+						}
+					}
+					&__opctions {
+						padding: 0.5rem;
+						background-color: colors.$offerColor;
+						backdrop-filter: blur(2px);
+						border-radius: 0.4rem;
+						&__list {
+							font-size: 1rem;
+							list-style: none;
+							&__li {
+								i {
+									margin-right: 0.5rem;
+								}
+							}
+						}
+					}
+				}
+				&__btn {
+					width: 10rem;
+					margin-top: 2rem;
+					font-size: 1.2rem;
+					font-weight: lighter;
+					text-align: center;
+					padding: 0.4rem;
+					border: none;
+					background: colors.$whiteMain;
+					box-shadow: 0 2px 3px colors.$blackMain;
+					border-radius: 5px;
+					cursor: pointer;
+					transition: background-color 0.3s;
+					&:hover {
+						background-color: colors.$greenMain;
+					}
 				}
 			}
 		}

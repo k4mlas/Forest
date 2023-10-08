@@ -15,15 +15,14 @@
 			font-size: 0.9rem;
 			height: 100%;
 			overflow: hidden;
-			
-	
+
 			&__item {
 				padding: 1.5rem;
 				text-decoration: none;
 				font-family: 'Roboto', sans-serif;
 				transition: background 0.3s, color 0.3s;
 				color: colors.$blackMain;
-				&:hover{
+				&:hover {
 					background: colors.$blackMain;
 					color: colors.$whiteMain;
 				}
@@ -92,6 +91,44 @@
 			margin: 2rem;
 			font-size: 1.3rem;
 			text-align: center;
+		}
+		&__nextOffer {
+			&__one {
+				background-image: url(../img/offerOneBig.jpg);
+				&--two {
+					background-image: url(../img/offerTwoBig.jpg);
+				}
+				&--three {
+					background-image: url(../img/offerThreeBig.jpg);
+				}
+				&__content {
+					&__box {
+						flex-direction: row;
+						justify-content: space-between;
+						&__text {
+							padding: 2rem;
+							&__title {
+								font-size: 5rem;
+							}
+							&__subtitle {
+								padding: 0.5rem;
+								font-size: 3.5rem;
+							}
+						}
+						&__opctions {
+							padding: 2rem;
+							&__list {
+								font-size: 1.3rem;
+							}
+						}
+					}
+					&__btn {
+						width: 15rem;
+						margin-top: 2rem;
+						font-size: 1.5rem;
+					}
+				}
+			}
 		}
 	}
 
