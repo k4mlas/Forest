@@ -105,7 +105,9 @@
 					&__box {
 						flex-direction: row;
 						justify-content: space-between;
+						align-items: center;
 						&__text {
+							
 							padding: 2rem;
 							&__title {
 								font-size: 5rem;
@@ -116,9 +118,11 @@
 							}
 						}
 						&__opctions {
+							width: 40%;
 							padding: 2rem;
-							&__list {
-								font-size: 1.3rem;
+							&__text{
+								text-align: center;
+								font-size: 1rem;
 							}
 						}
 					}
