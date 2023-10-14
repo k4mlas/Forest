@@ -120,10 +120,15 @@
 						&__opctions {
 							width: 40%;
 							padding: 2rem;
+							transition: scale .4s;
 							&__text{
 								text-align: center;
 								font-size: 1rem;
 							}
+							&:hover {
+								scale: 1.1;
+							}
+						
 						}
 					}
 					&__btn {
