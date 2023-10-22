@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="K4MLAS (Kamil Łaskarzewski)">
+    <meta name="keywords" content="spark, spacer, rekreacja, drzewa, las">
+    <meta name="description" content="FOREST - mamy dla Ciebie super oferty">
+    <title>Kontakt | Forest</title>
+    <link rel="stylesheet" href="./dist/css/style.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet">    <script src="https://kit.fontawesome.com/a29ce9ae35.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__content">
+            <a class="header__content__link" href="../index.html#home">
+                <p class="header__content__link__title"><i class="fa-solid fa-tree"></i>Forest</p>
+            </a>
+            <button class="header__content__btn">
+                <div class="header__content__btn__box">
+                    <div class="header__content__btn__box__line"></div>
+                </div>
+            </button>
+            <nav class="header__navDesktop">
+                <a href="../index.html#home" class="header__navDesktop__item">Home</a>
+                <a href="../index.html#aboutUs" class="header__navDesktop__item">O nas</a>
+                <a href="../index.html#offer" class="header__navDesktop__item">Oferta</a>
+                <a href="../index.html#contact" class="header__navDesktop__item activeNav">Kontakt</a>
+            </nav>
+        </div>
+        <nav class="header__nav">
+            <div class="header__nav__items">
+                <a href="../index.html#home" class="header__nav__items__item">Home</a>
+                <a href="../index.html#aboutUs" class="header__nav__items__item">O nas</a>
+                <a href="../index.html#offer" class="header__nav__items__item">Oferta</a>
+                <a href="../index.html#contact" class="header__nav__items__item">kontakt</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        <section class="contact sectionScroll" id="contact">
+            <div class="contact__shadow"></div>
+
+            <div class="contact__box wrapper">
+
+                <form class="contact__box__form">
+                    <h2 class="contact__box__form__title">Formularz kontaktowy:</h2>
+                    <div class="contact__box__form__opction">
+                        <label for="name">Twoje imię:</label>
+                        <input placeholder="Wpisz swoje imię" type="text" id="name">
+                        <p class="contact__box__form__opction__error" id="nameError">Uzupełnij pole</p>
+                    </div>
+                    <div class="contact__box__form__opction">
+                        <label for="mail">Twój adres e-mail:</label>
+                        <input placeholder="Wpisz swój adres e-mail" type="email" id="mail">
+                        <p class="contact__box__form__opction__error" id="emailError">Wpisz poprawny adres e-mail</p>
+                    </div>
+                    <div class="contact__box__form__opction">
+                        <label for="msg">Treść wiadomości:</label>
+                        <textarea placeholder="Wpisz wiadomość" id="msg" cols="30" rows="10"></textarea>
+                        <p class="contact__box__form__opction__error" id="textError">Pole nie może być puste</p>
+                    </div>
+                    <div class="contact__box__form__opction">
+                        <input type="checkbox" id="akcept">
+                        <label for="akcept">Akceptuję regulamin. Administratorem danych osobowych jest Forest Sp. z o.o.
+                            Dane wpisane w formularzu kontaktowym beda przetwarzane w celu udzielenia odpowiedzi na
+                            przestane zapytanie zgodnie z regulaminem </label>
+                    </div>
+
+                    <button type="button" class="contact__box__form__btn">wyślij</button>
+
+                </form>
+                <div class="contact__box__mapMobile">
+                    <iframe name="Mapa Google" title="Mapa google pokazująca lokalizację firmy Forest Sp. z o. o."
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9994.502459473088!2d22.5524811!3d51.2259721!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4722579f1314e13b%3A0xd41f7685e4e5c07c!2sMega%20System.%20Przedsi%C4%99biorstwo%20instalacyjne.%20Myrcha%20B.!5e0!3m2!1spl!2spl!4v1686228725004!5m2!1spl!2spl"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+</body>
+
+</html>

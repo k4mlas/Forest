@@ -16,7 +16,7 @@ html {
 }
 
 body {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .header {
@@ -277,13 +277,11 @@ body {
 				padding: 0.4rem;
 				border: none;
 				background: none;
-				box-shadow: 0 2px 3px colors.$blackMain;
+				box-shadow: 0 0.5px 9px colors.$blackMain;
 				border-radius: 5px;
 				cursor: pointer;
 				transition: background-color 0.3s;
-				&--active {
-					background-color: colors.$activeBtn;
-				}
+				background-color: colors.$activeBtn;
 				&:hover {
 					background-color: colors.$greenMain;
 				}
@@ -335,25 +333,25 @@ body {
 			background-repeat: no-repeat;
 			background-size: cover;
 			z-index: 0;
-			
+
 			&--two {
 				background-image: url(../img/offerTwoSmall.jpg);
 			}
 			&--three {
 				background-image: url(../img/offerThreeSmall.jpg);
 			}
-			&__shadow{
+			&__shadow {
 				position: absolute;
 				width: 100%;
 				height: 100%;
-				background-color: rgba(0, 0, 0, 0.275);
+				background-color: rgba(0, 0, 0, 0.204);
 				z-index: -1;
 			}
 			&__content {
 				display: flex;
-					flex-direction: column;
-					justify-content: center;
-					align-items: center;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
 				&__box {
 					display: flex;
 					flex-direction: column;
@@ -371,7 +369,7 @@ body {
 						}
 						&__subtitle {
 							padding: 0.5rem;
-							font-size: 3rem;
+							font-size: 2rem;
 							font-weight: bold;
 							color: colors.$greenMain;
 						}
@@ -381,11 +379,10 @@ body {
 						background-color: colors.$offerColor;
 						backdrop-filter: blur(2px);
 						border-radius: 0.4rem;
-						&__text{
+						&__text {
 							text-align: center;
-							font-size: .7rem;
+							font-size: 0.7rem;
 						}
-						
 					}
 				}
 				&__btn {
@@ -404,10 +401,43 @@ body {
 					z-index: 1000;
 					&:hover {
 						background-color: colors.$greenMain;
-						
 					}
 				}
 			}
+		}
+	}
+}
+
+.contact {
+	position: relative;
+	width: 100%;
+	background-image: url(../img/contactSmall.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: 0;
+	&__shadow{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.271);
+		z-index: -1;
+	}
+	&__box {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		&__form{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			max-width: 50%;
+			padding: 1rem;
+			border-radius: 1rem;
+			background-color: colors.$offerColor;
 		}
 	}
 }
