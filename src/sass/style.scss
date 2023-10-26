@@ -519,10 +519,11 @@ body {
 				background: colors.$whiteMain;
 				border-radius: 5px;
 				cursor: pointer;
-				transition: background-color 0.3s;
+				transition: background-color, color 0.3s;
 				z-index: 1000;
 				&:hover {
-					background-color: colors.$greenMain;
+					background-color: colors.$activeBtn;
+					color: colors.$whiteMain;
 				}
 			}
 		}
