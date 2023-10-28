@@ -36,3 +36,10 @@
 		text-transform: uppercase;
 	}
 }
+
+.errorInput{
+	background-color: colors.$errorInput !important; 
+	&::placeholder {
+		color: colors.$whiteMain;
+	}
+}

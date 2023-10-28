@@ -482,9 +482,10 @@ body {
 				}
 				&__error {
 					margin-top: 0.5rem;
-					font-size: 1rem;
+					font-size: .7rem;
 					font-weight: bolder;
 					text-align: center;
+					text-transform: uppercase;
 					color: colors.$errorColor;
 					visibility: hidden; //do zmiany w JS
 				}
@@ -506,7 +507,11 @@ body {
 				padding: 0.5rem;
 				width: 100%;
 				font-size: 0.7rem;
+				&__text{
+					margin-top: .5rem;
+				}
 			}
+
 			&__btn {
 				width: 50%;
 				margin-top: 1rem;
