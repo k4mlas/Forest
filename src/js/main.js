@@ -157,7 +157,7 @@ const checkText = () => {
 const checkCheck = () => {
 	if ($formCheck.checked) {
 		$checkError.style.visibility = 'hidden';
-		// $errors = 0;
+		$errors = 0;
 	} else {
 		$checkError.style.visibility = 'visible';
 		$errors = $errors + 1;
