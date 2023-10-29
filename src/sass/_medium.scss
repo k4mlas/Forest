@@ -140,12 +140,14 @@
 	}
 	.contact {
 		background-image: url(../img/contactBig.jpg);
+		height: 900px;
 		&__box {
 			flex-direction: row;
 			justify-content: space-evenly;
-			height: 100vh;
+			height: 100%;
 			&__form {
 				width: 40%;
+				
 				&__title {
 					font-size: 1.6rem;
 					text-align: center;
