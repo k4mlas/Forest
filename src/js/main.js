@@ -133,7 +133,7 @@ const checkText = () => {
 };
 
 const checkCheck = () => {
-	if ($formCheck == false) {
+	if ($formCheck.checked) {
 		$checkError.style.visibility = 'hidden';
 	} else {
 		$checkError.style.visibility = 'visible';
