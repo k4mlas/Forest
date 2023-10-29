@@ -18,6 +18,9 @@ let $textError;
 let $formCheck;
 let $checkError;
 let $formBtn;
+let $popup;
+let $popupBtn;
+let $errors;
 
 ///////////////////////////////////////Funkcja main
 
@@ -43,11 +46,15 @@ const prepareDOMElements = () => {
 	$formCheck = document.getElementById('akcept');
 	$checkError = document.getElementById('checkError');
 	$formBtn = document.querySelector('.contact__box__form__btn');
+	$popup = document.querySelector('.contact__popup');
+	$popupBtn = document.querySelector('.contact__popup__btn');
+	$errors = 0;
 };
 
 const prepareDOMEvens = () => {
 	$btnNavMobile.addEventListener('click', showNav);
 	$formBtn.addEventListener('click', checkForm);
+	$popupBtn.addEventListener('click', popupEnd);
 };
 ////////////////////////////////////////////////////////////////////////Funkcje
 
@@ -98,15 +105,26 @@ const checkForm = () => {
 	checkEmail();
 	checkText();
 	checkCheck();
+	if ($errors == 0) {
+		$popup.style.display = 'flex';
+		document.body.classList.add('sticky-body');
+		$name.value = '';
+		$mail.value = '';
+		$msg.value = '';
+		$formCheck.checked = false;
+	}
+	console.log($errors);
 };
 
 const checkName = () => {
 	if ($name.value != '') {
 		$nameError.style.visibility = 'hidden';
 		$name.classList.remove('errorInput');
+		$errors = 0;
 	} else {
 		$nameError.style.visibility = 'visible';
 		$name.classList.add('errorInput');
+		$errors = $errors + 1;
 	}
 };
 
@@ -116,9 +134,11 @@ const checkEmail = () => {
 	if ($mail.value != '' && reg.test($mail.value)) {
 		$emailError.style.visibility = 'hidden';
 		$mail.classList.remove('errorInput');
+		$errors = 0;
 	} else {
 		$emailError.style.visibility = 'visible';
 		$mail.classList.add('errorInput');
+		$errors = $errors + 1;
 	}
 };
 
@@ -126,18 +146,27 @@ const checkText = () => {
 	if ($msg.value != '') {
 		$textError.style.visibility = 'hidden';
 		$msg.classList.remove('errorInput');
+		$errors = 0;
 	} else {
 		$textError.style.visibility = 'visible';
 		$msg.classList.add('errorInput');
+		$errors = $errors + 1;
 	}
 };
 
 const checkCheck = () => {
 	if ($formCheck.checked) {
 		$checkError.style.visibility = 'hidden';
+		// $errors = 0;
 	} else {
 		$checkError.style.visibility = 'visible';
+		$errors = $errors + 1;
 	}
+};
+
+const popupEnd = () => {
+	$popup.style.display = 'none';
+	document.body.classList.remove('sticky-body');
 };
 ////////////////////////////////////////////////////////Funkcja Main
 
