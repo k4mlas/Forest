@@ -13,14 +13,9 @@ let $name;
 let $mail;
 let $msg;
 let $nameError;
-let $emailError;
-let $textError;
-let $formCheck;
-let $checkError;
 let $formBtn;
 let $popup;
 let $popupBtn;
-let $errors;
 
 ///////////////////////////////////////Funkcja main
 
@@ -40,21 +35,18 @@ const prepareDOMElements = () => {
 	$name = document.getElementById('name');
 	$mail = document.getElementById('mail');
 	$msg = document.getElementById('msg');
-	$nameError = document.getElementById('nameError');
-	$emailError = document.getElementById('emailError');
-	$textError = document.getElementById('textError');
-	$formCheck = document.getElementById('akcept');
-	$checkError = document.getElementById('checkError');
+	$nameError = document.querySelectorAll('.contact__box__form__opction__error');
 	$formBtn = document.querySelector('.contact__box__form__btn');
 	$popup = document.querySelector('.contact__popup');
 	$popupBtn = document.querySelector('.contact__popup__btn');
-	$errors = 0;
 };
 
 const prepareDOMEvens = () => {
 	$btnNavMobile.addEventListener('click', showNav);
-	$formBtn.addEventListener('click', checkForm);
-	$popupBtn.addEventListener('click', popupEnd);
+	$formBtn.addEventListener('click', (e) => {
+		e.preventDefault();
+		checkForm([$name, $mail, $msg]);
+	});
 };
 ////////////////////////////////////////////////////////////////////////Funkcje
 
@@ -100,74 +92,49 @@ window.onscroll = () => {
 
 // Form
 
-const checkForm = () => {
-	checkName();
-	checkEmail();
-	checkText();
-	checkCheck();
-	if ($errors == 0) {
-		$popup.style.display = 'flex';
-		document.body.classList.add('sticky-body');
-		$name.value = '';
-		$mail.value = '';
-		$msg.value = '';
-		$formCheck.checked = false;
-	}
-	console.log($errors);
+const showError = (input) => {
+	const errorAlert = input.nextElementSibling;
+	errorAlert.style.visibility = 'visible';
+	input.classList.add('errorInput');
 };
 
-const checkName = () => {
-	if ($name.value != '') {
-		$nameError.style.visibility = 'hidden';
-		$name.classList.remove('errorInput');
-		$errors = 0;
-	} else {
-		$nameError.style.visibility = 'visible';
-		$name.classList.add('errorInput');
-		$errors = $errors + 1;
-	}
+const hideError = (input) => {
+	const errorAlert = input.nextElementSibling;
+	errorAlert.style.visibility = 'hidden';
+	input.classList.remove('errorInput');
 };
 
 const checkEmail = () => {
 	const reg =
 		/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-	if ($mail.value != '' && reg.test($mail.value)) {
-		$emailError.style.visibility = 'hidden';
-		$mail.classList.remove('errorInput');
-		$errors = 0;
-	} else {
-		$emailError.style.visibility = 'visible';
-		$mail.classList.add('errorInput');
-		$errors = $errors + 1;
-	}
+
+
 };
 
-const checkText = () => {
-	if ($msg.value != '') {
-		$textError.style.visibility = 'hidden';
-		$msg.classList.remove('errorInput');
-		$errors = 0;
-	} else {
-		$textError.style.visibility = 'visible';
-		$msg.classList.add('errorInput');
-		$errors = $errors + 1;
-	}
+const checkForm = (inputs) => {
+	inputs.forEach((el) => {
+		if (el.value === '') {
+			showError(el);
+		} else {
+			hideError(el);
+		}
+	});
 };
 
-const checkCheck = () => {
-	if ($formCheck.checked) {
-		$checkError.style.visibility = 'hidden';
-		$errors = 0;
-	} else {
-		$checkError.style.visibility = 'visible';
-		$errors = $errors + 1;
-	}
-};
+// const checkEmail = () => {
+// 	const reg =
+// 		/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+// 	if ($mail.value != '' && reg.test($mail.value)) {
+// 		$emailError.style.visibility = 'hidden';
+// 		$mail.classList.remove('errorInput');
+// 		$errors = 0;
+// 	} else {
+// 		$emailError.style.visibility = 'visible';
+// 		$mail.classList.add('errorInput');
+// 		$errors = $errors + 1;
+// 	}
+// };
 
-const popupEnd = () => {
-	$popup.style.display = 'none';
-	document.body.classList.remove('sticky-body');
-};
 ////////////////////////////////////////////////////////Funkcja Main
 
 document.addEventListener('DOMContentLoaded', main);
