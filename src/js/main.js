@@ -46,7 +46,10 @@ const prepareDOMEvens = () => {
 	$formBtn.addEventListener('click', (e) => {
 		e.preventDefault();
 		checkForm([$name, $mail, $msg]);
+		checkEmail();
+		checkError([$name, $mail, $msg]);
 	});
+	$popupBtn.addEventListener('click', closeForm);
 };
 ////////////////////////////////////////////////////////////////////////Funkcje
 
@@ -107,8 +110,30 @@ const hideError = (input) => {
 const checkEmail = () => {
 	const reg =
 		/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	if (reg.test($mail.value)) {
+		hideError($mail);
+	} else {
+		showError($mail);
+	}
+};
 
+const checkError = (inputs) => {
+	let errors = 0;
+	inputs.forEach((er) => {
+		if (er.classList.contains('errorInput')) {
+			errors++;
+		}
+	});
+	if (errors == 0) {
+		$popup.style.display = 'flex';
+	}
+};
 
+const closeForm = () => {
+	$popup.style.display = 'none';
+	$name.value = '';
+	$mail.value = '';
+	$msg.value = '';
 };
 
 const checkForm = (inputs) => {
@@ -120,20 +145,6 @@ const checkForm = (inputs) => {
 		}
 	});
 };
-
-// const checkEmail = () => {
-// 	const reg =
-// 		/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-// 	if ($mail.value != '' && reg.test($mail.value)) {
-// 		$emailError.style.visibility = 'hidden';
-// 		$mail.classList.remove('errorInput');
-// 		$errors = 0;
-// 	} else {
-// 		$emailError.style.visibility = 'visible';
-// 		$mail.classList.add('errorInput');
-// 		$errors = $errors + 1;
-// 	}
-// };
 
 ////////////////////////////////////////////////////////Funkcja Main
 
