@@ -87,11 +87,27 @@
 		}
 	}
 	.offer {
+		&__body {
+			margin: none;
+			&__content {
+				width: 265px;
+				background-color: colors.$whiteMain;
+				padding: 2.5rem;
+				margin: 2rem;
+				border-radius: 0.4rem;
+				box-shadow: 0 0 10px colors.$blackMain;
+				transition: transform 0.4s;
+				&:hover {
+					transform: scale(0.96);
+				}
+			}
+		}
 		&__link {
 			margin: 2rem;
 			font-size: 1.3rem;
 			text-align: center;
 		}
+
 		&__nextOffer {
 			&__one {
 				background-image: url(../img/offerOneBig.jpg);
@@ -147,7 +163,7 @@
 			height: 100%;
 			&__form {
 				width: 40%;
-				
+
 				&__title {
 					font-size: 1.6rem;
 					text-align: center;
