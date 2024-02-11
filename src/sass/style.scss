@@ -434,15 +434,16 @@ body {
 			list-style-type: none;
 			&__img {
 				padding: 1rem;
-				margin-top: 1rem;
-				&--one {
-					max-width: 350px;
-					height: 250px;
+				max-width: 350px;
+				height: 250px;
+				cursor: pointer;
+				transition: transform 0.4s;
+				&:hover {
+					transform: scale(0.95);
 				}
-				&--two {
-					max-width: 500px;
-					height: 500px;
-				}
+			}
+			&:nth-last-child(-n + 1) {
+				margin-bottom: 2rem;
 			}
 		}
 	}
