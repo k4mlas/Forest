@@ -438,9 +438,11 @@ body {
 				height: 250px;
 				border-radius: 2rem;
 				cursor: pointer;
-				transition: transform 0.4s;
+				filter: grayscale(1);
+				transition: transform 0.4s, filter 0.4s;
 				&:hover {
 					transform: scale(0.95);
+					filter: grayscale(0);
 				}
 			}
 			&:nth-last-child(-n + 1) {
