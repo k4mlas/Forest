@@ -420,7 +420,8 @@ body {
 	justify-content: center;
 	align-items: center;
 	background-color: #166d3b;
-	background-image: linear-gradient(147deg, #125c32 0%, #000000 74%);
+	background-image: colors.$sectionGalleryColor;
+	// filter: blur(8px); dodawany w JS
 	&__body {
 		&__title {
 			color: colors.$whiteMain;
@@ -448,6 +449,32 @@ body {
 			&:nth-last-child(-n + 1) {
 				margin-bottom: 2rem;
 			}
+		}
+	}
+}
+
+.popup {
+	display: none; // zmienic na flex w JS
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	height: 100%;
+	background: colors.$shadowGallery;
+
+	&__img {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 5%;
+		img {
+			max-width: 75%;
+			// max-height: 75%;
 		}
 	}
 }
