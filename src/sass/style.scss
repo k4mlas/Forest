@@ -454,7 +454,7 @@ body {
 }
 
 .popup {
-	display: none; // zmienic na flex w JS
+	display: flex; // zmienic na flex w JS
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
@@ -474,7 +474,7 @@ body {
 		top: 5%;
 		img {
 			max-width: 75%;
-			// max-height: 75%;
+			max-height: 75%;
 		}
 	}
 }
