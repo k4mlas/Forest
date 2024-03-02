@@ -16,6 +16,12 @@ let $nameError;
 let $formBtn;
 let $popup;
 let $popupBtn;
+// Gallery
+let $photos;
+let $popupGallery;
+let $closeGallery;
+let $body;
+let $popupImg;
 
 ///////////////////////////////////////Funkcja main
 
@@ -39,6 +45,8 @@ const prepareDOMElements = () => {
 	$formBtn = document.querySelector('.contact__box__form__btn');
 	$popup = document.querySelector('.contact__popup');
 	$popupBtn = document.querySelector('.contact__popup__btn');
+	$body = document.querySelector('body');
+	$photos = document.querySelectorAll('.gallery__body__images');
 };
 
 const prepareDOMEvens = () => {
@@ -126,6 +134,7 @@ const checkError = (inputs) => {
 	});
 	if (errors == 0) {
 		$popup.style.display = 'flex';
+		$body.classList.add("scrollNone");
 	}
 };
 
@@ -134,6 +143,7 @@ const closeForm = () => {
 	$name.value = '';
 	$mail.value = '';
 	$msg.value = '';
+	$body.classList.remove("scrollNone");
 };
 
 const checkForm = (inputs) => {

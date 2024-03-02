@@ -47,3 +47,8 @@
 		color: colors.$whiteMain;
 	}
 }
+
+//Blokowanie body
+.scrollNone {
+	overflow: hidden;
+}
