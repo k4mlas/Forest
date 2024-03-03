@@ -29,6 +29,7 @@ const main = () => {
 	prepareDOMElements();
 	prepareDOMEvens();
 	handleCurrentYear();
+	rojo();
 };
 
 const prepareDOMElements = () => {
@@ -46,7 +47,10 @@ const prepareDOMElements = () => {
 	$popup = document.querySelector('.contact__popup');
 	$popupBtn = document.querySelector('.contact__popup__btn');
 	$body = document.querySelector('body');
-	$photos = document.querySelectorAll('.gallery__body__images');
+	$photos = document.querySelectorAll('.gallery__body__images__img img');
+	$popupGallery = document.querySelector('.popupGallery');
+	$closeGallery = document.querySelector('.closeGallery');
+	$popupImg = document.createElement('img');
 };
 
 const prepareDOMEvens = () => {
@@ -61,12 +65,15 @@ const prepareDOMEvens = () => {
 };
 ////////////////////////////////////////////////////////////////////////Funkcje
 
+
 //DATA
 
 const handleCurrentYear = () => {
 	const year = new Date().getFullYear();
 	$footerYear.innerText = year;
 };
+
+
 
 //Nawigacja mobilna
 
@@ -79,6 +86,11 @@ const showNav = () => {
 			document.body.classList.remove('sticky-body');
 		});
 	});
+};
+
+//Gallery
+const rojo = () => {
+	console.log($photos[1]);
 };
 
 //scrollspy
@@ -134,7 +146,7 @@ const checkError = (inputs) => {
 	});
 	if (errors == 0) {
 		$popup.style.display = 'flex';
-		$body.classList.add("scrollNone");
+		$body.classList.add('scrollNone');
 	}
 };
 
@@ -143,7 +155,7 @@ const closeForm = () => {
 	$name.value = '';
 	$mail.value = '';
 	$msg.value = '';
-	$body.classList.remove("scrollNone");
+	$body.classList.remove('scrollNone');
 };
 
 const checkForm = (inputs) => {
