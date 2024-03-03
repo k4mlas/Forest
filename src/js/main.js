@@ -1,6 +1,7 @@
 ////////////////////////////////////////zmienne do strony
 
 let $footerYear;
+let $body;
 
 let $btnNavMobile;
 let $navMobile;
@@ -17,17 +18,17 @@ let $formBtn;
 let $popup;
 let $popupBtn;
 // Gallery
+
 let $photos;
 let $popupGallery;
 let $closeGallery;
-let $body;
 let $popupImg;
 
 ///////////////////////////////////////Funkcja main
 
 const main = () => {
 	prepareDOMElements();
-	rojo();
+	galleryEngine();
 	handleCurrentYear();
 	prepareDOMEvens();
 };
@@ -48,7 +49,7 @@ const prepareDOMElements = () => {
 	$popupBtn = document.querySelector('.contact__popup__btn');
 	$body = document.querySelector('body');
 	$photos = document.querySelectorAll('.gallery__body__images__img img');
-	$popupGallery = document.querySelector('.popupGallery');
+	$popupGallery = document.querySelector('.gallery__popupGallery');
 	$closeGallery = document.querySelector('.closeGallery');
 	$popupImg = document.createElement('img');
 };
@@ -56,7 +57,7 @@ const prepareDOMElements = () => {
 const prepareDOMEvens = () => {
 	$btnNavMobile.addEventListener('click', showNav);
 	$popupBtn.addEventListener('click', closeForm);
-	$formBtn.addEventListener('click',checkAllForm)
+	$formBtn.addEventListener('click', checkAllForm);
 };
 ////////////////////////////////////////////////////////////////////////Funkcje
 
@@ -163,8 +164,19 @@ const checkAllForm = (e) => {
 };
 
 //Gallery
-const rojo = () => {
+const galleryEngine = () => {
 	console.log('asasaslkmlkmlmlml');
+	$photos.forEach((photo, index) => {
+		photo.addEventListener('click', (e) => {
+			$body.classList.add('scrollNone');
+			$popupGallery.classList.add('showPopupImg');
+			$popupImg.setAttribute('src', '');
+			$popupImg.src = e.target.src;
+			$popupGallery.appendChild($popupImg);
+			$popupGallery.classList.add('gallery__popupGallery__img');
+			console.log(index);
+		});
+	});
 };
 
 ////////////////////////////////////////////////////////Funkcja Main
