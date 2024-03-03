@@ -27,9 +27,9 @@ let $popupImg;
 
 const main = () => {
 	prepareDOMElements();
-	prepareDOMEvens();
-	handleCurrentYear();
 	rojo();
+	handleCurrentYear();
+	prepareDOMEvens();
 };
 
 const prepareDOMElements = () => {
@@ -55,16 +55,10 @@ const prepareDOMElements = () => {
 
 const prepareDOMEvens = () => {
 	$btnNavMobile.addEventListener('click', showNav);
-	$formBtn.addEventListener('click', (e) => {
-		e.preventDefault();
-		checkForm([$name, $mail, $msg]);
-		checkEmail();
-		checkError([$name, $mail, $msg]);
-	});
 	$popupBtn.addEventListener('click', closeForm);
+	$formBtn.addEventListener('click',checkAllForm)
 };
 ////////////////////////////////////////////////////////////////////////Funkcje
-
 
 //DATA
 
@@ -72,8 +66,6 @@ const handleCurrentYear = () => {
 	const year = new Date().getFullYear();
 	$footerYear.innerText = year;
 };
-
-
 
 //Nawigacja mobilna
 
@@ -86,11 +78,6 @@ const showNav = () => {
 			document.body.classList.remove('sticky-body');
 		});
 	});
-};
-
-//Gallery
-const rojo = () => {
-	console.log($photos[1]);
 };
 
 //scrollspy
@@ -166,6 +153,18 @@ const checkForm = (inputs) => {
 			hideError(el);
 		}
 	});
+};
+
+const checkAllForm = (e) => {
+	e.preventDefault();
+	checkForm([$name, $mail, $msg]);
+	checkEmail();
+	checkError([$name, $mail, $msg]);
+};
+
+//Gallery
+const rojo = () => {
+	console.log('asasaslkmlkmlmlml');
 };
 
 ////////////////////////////////////////////////////////Funkcja Main
