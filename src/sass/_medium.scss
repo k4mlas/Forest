@@ -154,7 +154,17 @@
 			}
 		}
 	}
-	
+	.gallery {
+		&__popupGallery {
+			&__img {
+				&__button {
+					font-size: 2rem;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+
 	.contact {
 		background-image: url(../img/contactBig.jpg);
 		height: 900px;
