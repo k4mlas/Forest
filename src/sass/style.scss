@@ -467,6 +467,7 @@ body {
 		height: 100%;
 		align-items: center;
 		background: colors.$shadowGallery;
+		animation: fadeIn 0.6s;
 		backdrop-filter: blur(10px);
 
 		&__img {
@@ -494,7 +495,6 @@ body {
 				transition: color 0.4s;
 				&:hover {
 					color: colors.$activeBtn;
-					
 				}
 				&--close {
 					top: 1rem;
@@ -774,6 +774,16 @@ body {
 		}
 	}
 }
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 100;
+	}
+}
+
 @import './components';
 @import './medium';
 @import './large';
