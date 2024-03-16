@@ -457,7 +457,7 @@ body {
 		}
 	}
 	&__popupGallery {
-		display: flex; //zminić nan none i właczć js w gallery.kit
+		display: none; //zminić nan none i właczć js w gallery.kit
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
@@ -478,7 +478,7 @@ body {
 
 			img {
 				max-width: 100%;
-				max-height: 75%;
+				height: 100%;
 				min-width: 100%;
 			}
 			&__button {

@@ -23,6 +23,11 @@ let $photos;
 let $popupGallery;
 let $closeGallery;
 let $popupImg;
+let $popupGalleryImg;
+let $indexImg;
+let $next;
+let $back;
+let $closeBtn;
 
 ///////////////////////////////////////Funkcja main
 
@@ -51,6 +56,12 @@ const prepareDOMElements = () => {
 	$photos = document.querySelectorAll('.gallery__body__images__img img');
 	$popupGallery = document.querySelector('.gallery__popupGallery');
 	$closeGallery = document.querySelector('.closeGallery');
+	$popupGalleryImg = document.querySelector('.gallery__popupGallery__img');
+	$next = document.querySelector('.gallery__popupGallery__img__button--next');
+	$back = document.querySelector(
+		'.gallery__popupGallery__img__button--previous'
+	);
+	$closeBtn = document.querySelector('.gallery__popupGallery__img__button--close');
 	$popupImg = document.createElement('img');
 };
 
@@ -165,18 +176,41 @@ const checkAllForm = (e) => {
 
 //Gallery
 const galleryEngine = () => {
-	console.log('asasaslkmlkmlmlml');
 	$photos.forEach((photo, index) => {
 		photo.addEventListener('click', (e) => {
 			$body.classList.add('scrollNone');
 			$popupGallery.classList.add('showPopupImg');
 			$popupImg.setAttribute('src', '');
 			$popupImg.src = e.target.src;
-			$popupGallery.appendChild($popupImg);
-			$popupGallery.classList.add('gallery__popupGallery__img');
-			console.log(index);
+			$popupGalleryImg.appendChild($popupImg);
+			$indexImg = index;
+			$next.addEventListener('click', nextPhoto);
+			$back.addEventListener('click', backPhoto);
+			$closeBtn.addEventListener('click', close);
+			console.log($indexImg);
 		});
 	});
+};
+
+const nextPhoto = () => {
+	if ($indexImg == $photos.length - 1) {
+		$indexImg = 0;
+	} else {
+		$indexImg++;
+	}
+	$popupImg.src = $photos[$indexImg].src;
+};
+const backPhoto = () => {
+	if ($indexImg == 0) {
+		$indexImg = $photos.length -1;
+	} else {
+		$indexImg--;
+	}
+	$popupImg.src = $photos[$indexImg].src;
+};
+const close = () => {
+	$popupGallery.classList.remove('showPopupImg');
+	$body.classList.remove('scrollNone');
 };
 
 ////////////////////////////////////////////////////////Funkcja Main
